@@ -48,7 +48,7 @@ en:
       title: Title
   layouts:
     application:
-      title: JerbBoard
+      title: JobBoard
   time:
     formats:
       short: "%m/%d/%Y"

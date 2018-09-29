@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170922234801) do
+ActiveRecord::Schema.define(version: 20180929194233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,14 @@ ActiveRecord::Schema.define(version: 20170922234801) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name", default: "", null: false
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string "zip_code", null: false
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["zip_code"], name: "index_regions_on_zip_code"
   end
 
   add_foreign_key "job_postings", "categories"

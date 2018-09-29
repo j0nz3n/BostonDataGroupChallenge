@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :regions
   root to: "job_postings#index"
 
   resources :job_postings, only: [:create, :edit, :index, :new, :show, :update]
