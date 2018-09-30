@@ -3,6 +3,8 @@ class JobPosting < ApplicationRecord
   belongs_to :category
   belongs_to :location
 
+  has_many :categories
+
   enum status: {
     new_post: 0,
     pending: 1,
