@@ -10,6 +10,7 @@
       <th><%= t(".poster") %></th>
       <th><%= t(".category") %></th>
       <th><%= t(".location") %></th>
+      <th>Region</th>
       <th><%= t(".status") %></th>
       <th><%= t(".actions") %></th>
   </thead>
@@ -21,6 +22,7 @@
         <td class="posting-poster"><%= posting.poster_name %></td>
         <td class="posting-category"><%= posting.category_name %></td>
         <td class="posting-location"><%= posting.location_city %></td>
+        <td class="posting-zip_code"><%= Region.find_by(zip_code: posting.location.zip_code).name %></td>
         <td class="posting-status"><%= posting.status %></td>
         <td class="posting-actions">
           <%= link_to t(".action.view"), posting %>
