@@ -9,7 +9,7 @@ class JobPosting < ApplicationRecord
     complete: 2
   }
 
-  validates :title, presence: true
+  validates :title, :description, presence: true
 
   after_initialize :set_defaults
 
