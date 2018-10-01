@@ -11,7 +11,7 @@ jobs:
 
       # Restore bundle cache
       - restore_cache:
-          key: jerb-board-{{ checksum "Gemfile.lock" }}
+          key: job-board-{{ checksum "Gemfile.lock" }}
 
       # cmake is required by Rugged, a dependency of Pronto
       - run:
@@ -25,7 +25,7 @@ jobs:
 
       # Store bundle cache
       - save_cache:
-          key: jerb-board-{{ checksum "Gemfile.lock" }}
+          key: job-board-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
 

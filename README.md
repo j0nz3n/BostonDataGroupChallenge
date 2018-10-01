@@ -5,8 +5,8 @@ As a newly-minted software consultant, you've been tasked with expanding upon a 
 
 1. Job posters call a phone number.
 2. The receptionist takes down the information.
-3. The receptionist enters it in the JerbyJerbs application.
-4. JerbyJerbs staff manually match up posted jobs to job doers.
+3. The receptionist enters it in the JobyJobs application.
+4. JobyJobs staff manually match up posted jobs to job doers.
 
 This is a multi-phased engagement. The goal of this phase is to build upon the existing code to support the job posting process.
 
@@ -25,7 +25,7 @@ Submit the results of your three completed tasks as a Pull Request for the team 
 
 ## Required Task
 
-101. Associate locations in the system with a region so that JerbyJerbs can easily segment job postings across a state. Modify the system so that when creating a location, you can specify the region the location is associated with, and show the name of that region on the location's show page. While it's not needed anywhere in the application, ensure it's easy to group all locations by region.
+101. Associate locations in the system with a region so that JobyJobs can easily segment job postings across a state. Modify the system so that when creating a location, you can specify the region the location is associated with, and show the name of that region on the location's show page. While it's not needed anywhere in the application, ensure it's easy to group all locations by region.
 
 ## Available Tasks
 

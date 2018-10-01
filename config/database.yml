@@ -10,11 +10,11 @@ default: &default
 
 development:
   <<: *default
-  database: jerb-board_development
+  database: job-board_development
 
 test:
   <<: *default
-  database: jerb-board_test
+  database: job-board_test
 
 production:
   <<: *default
