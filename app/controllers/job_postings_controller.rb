@@ -1,5 +1,7 @@
 class JobPostingsController < ApplicationController
   before_action :set_job_posting, only: [:edit, :show]
+  
+  helper_method :sort_column, :sort_direction
 
   def create
     @job_posting = JobPosting.new(job_posting_params)
@@ -18,6 +20,7 @@ class JobPostingsController < ApplicationController
     @job_postings = JobPosting.paginate(page: params[:page])
       .includes(:job_poster, :category, :location)
       .decorate
+      # .order("#{sort_column} #{sort_direction}")
       
   end
 
@@ -46,5 +49,17 @@ class JobPostingsController < ApplicationController
 
   def set_job_posting
     @job_posting = JobPosting.find(params[:id]).decorate
+  end
+
+  def sortable_columns
+    ["status"]
+  end
+
+  def sort_column
+    sortable_columns.include?(params[:status]) ? params[:status] : "status"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 end
